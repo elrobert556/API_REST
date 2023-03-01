@@ -9,26 +9,32 @@ class usuarios extends BD_PDO{
         $moneda = $this->Ejecutar_Instruccion("SELECT *FROM usuarios WHERE ID =$id");
         return $moneda;
     }
-    function listados($consulta_primaria,$consulta_foranea)
-    {
-        $datos = "";
-        $datos_primaria = $this->Ejecutar_Instruccion($consulta_primaria);
-        $datos_foranea = $this->Ejecutar_Instruccion($consulta_foranea);
-        
-        $selected = "";
-        foreach ($datos_primaria as $renglon) 
+    function tabla_usuarios($moneda){
+        $tabla="";
+        foreach ($moneda as $renglon)
         {
-            if ($datos_foranea[0][0]==$renglon[0]) 
-            {
-                $selected = "Selected";
-            }
-            else
-            {
-                $selected = "";
-            }
-            $datos=$datos.'<option value="'.$renglon[0].'" '.$selected.'>'.$renglon[1].'</option>';
+            $tabla.='<table border="colspan">';
+            $tabla.='<tr>';
+            $tabla.='<td>ID</td>';
+            $tabla.='<td>Correo</td>';
+            $tabla.='<td>Token</td>';
+            $tabla.='<td>Salt</td>';
+            $tabla.='<td>User_password</td>';
+            $tabla.='<td>Estado</td>';
+            $tabla.='<td>Privilegio</td>';
+            $tabla.='<tr>';
+            $tabla.='<tr>';
+            $tabla.='<td>'.$renglon[0].'</td>';
+            $tabla.='<td>'.$renglon[1].'</td>';
+            $tabla.='<td>'.$renglon[2].'</td>';
+            $tabla.='<td>'.$renglon[3].'</td>';
+            $tabla.='<td>'.$renglon[4].'</td>';
+            $tabla.='<td>'.$renglon[5].'</td>';
+            $tabla.='<td>'.$renglon[6].'</td>';
+            $tabla.='<tr>';
+            $tabla.='</table>';
         }
-        return $datos;
+        return $tabla;
     }
 }
 ?>

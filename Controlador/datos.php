@@ -1,6 +1,6 @@
 <?php
 //Se encarga de mostrar los arreglos en formato json
-header('Content-Type: application/json');
+//header('Content-Type: application/json');
 //Indica si los recursos de la respuesta pueden ser compartidos con el origen dado
 header("Access-Control-Allow-Origin: *");
 
@@ -25,7 +25,8 @@ if ($_GET['moneda']) {
             echo 'El dato que ingreso no existe';
         }else{
             $moneda = $usuario->buscar_usuario($id);
-            echo json_encode($moneda);
+            $tabla_result = $usuario->tabla_usuarios($moneda);
+            echo $tabla_result;
         }
     }else{
         //Este mensaje se mostrara si el dato no es numerico
