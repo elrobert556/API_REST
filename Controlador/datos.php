@@ -26,7 +26,8 @@ if ($_GET['moneda']) {
         }else{
             $moneda = $usuario->buscar_usuario($id);
             $tabla_result = $usuario->tabla_usuarios($moneda);
-            echo $tabla_result;
+            //echo $tabla_result;
+            echo json_encode($moneda);
         }
     }else{
         //Este mensaje se mostrara si el dato no es numerico
