@@ -2,4 +2,5 @@ Options +FollowSymLinks
 
 RewriteEngine On
 
-RewriteRule ^([a-zA-Z0-9]*)$ datos.php?moneda=$1
+#Permite ingresar un parametro por medio de la URL
+RewriteRule ^([a-zA-Z0-9]*)$ Controlador/datos.php?moneda=$1
