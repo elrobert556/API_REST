@@ -4,9 +4,6 @@ header('Content-Type: application/json');
 //Indica si los recursos de la respuesta pueden ser compartidos con el origen dado
 header("Access-Control-Allow-Origin: *");
 
-/*include '../Modelo/conexion_bd.php';
-$obj = new BD_PDO();*/
-
 require '../Modelo/funciones.php';
 $usuario = new usuarios();
 
