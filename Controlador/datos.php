@@ -1,6 +1,4 @@
 <?php
-//Se encarga de mostrar los arreglos en formato json
-//header('Content-Type: application/json');
 //Indica si los recursos de la respuesta pueden ser compartidos con el origen dado
 header("Access-Control-Allow-Origin: *");
 
@@ -19,14 +17,11 @@ if ($_GET['moneda']) {
         foreach($num as $renglon){ $id_usua = $renglon[0]; }
         //Convierto el parametro enviado en un integer
         $id = (int)$id;
-        /*Escribo una condicion en la cual si el parametro enviado por la URL es mayor al id del ultimo registro de la tabla 'usuarios'
-        escriba que el dato no existe*/
+        /*Escribo una condicion en la cual si el parametro enviado por la URL es mayor al id del ultimo registro de la tabla 'usuarios' escriba que el dato no existe*/
         if ($id > $id_usua) {
             echo 'El dato que ingreso no existe';
         }else{
             $moneda = $usuario->buscar_usuario($id);
-            $tabla_result = $usuario->tabla_usuarios($moneda);
-            //echo $tabla_result;
             echo json_encode($moneda);
         }
     }else{
