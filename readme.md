@@ -8,16 +8,16 @@ Ejemplo: "localhost/API_REST/1" daria el siguiente resultado.
   {  
     "0": 1,  
     "1": "joel@gmail.com",  
-    "2": "token",  
-    "3": "salt",  
-    "4": "password",  
+    "2": "$2y$10$k32PONTj193WCAwff5M2x.mr3eieaveLttc8dH6iVXk7fWmxYMd3i",  
+    "3": "\ufffd\ufffd\ufffd\ufffd\"j\ufffd\u000e\ufffd\ufffd\ufffd\ufffda\ufffd=g)#o\ufffd?\u0005123",  
+    "4": "a58646012b945777b303dbd357badf4351d61c705987d5c3065b0d0c800aa723",  
     "5": "Activo",  
     "6": "Admin",  
     "id": 1,  
     "correo": "joel@gmail.com",  
-    "token": "token",  
-    "salt": "salt",  
-    "user_password": "password",  
+    "token": "$2y$10$k32PONTj193WCAwff5M2x.mr3eieaveLttc8dH6iVXk7fWmxYMd3i",  
+    "salt": "\ufffd\ufffd\ufffd\ufffd\"j\ufffd\u000e\ufffd\ufffd\ufffd\ufffda\ufffd=g)#o\ufffd?\u0005123",  
+    "user_password": "a58646012b945777b303dbd357badf4351d61c705987d5c3065b0d0c800aa723",  
     "estado_usuario": "Activo",  
     "privilegio": "Admin"  
   }  
