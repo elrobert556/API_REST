@@ -125,3 +125,12 @@ class BD_PDO
 	}
 }
 ```
+### .htaccess
+```htaccess
+Options +FollowSymLinks
+
+RewriteEngine On
+
+#Permite ingresar un parametro por medio de la URL
+RewriteRule ^([a-zA-Z0-9]*)$ Controlador/datos.php?moneda=$1
+```
